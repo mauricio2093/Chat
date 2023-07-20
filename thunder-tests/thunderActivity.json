@@ -1,0 +1,30 @@
+[
+    {
+        "_id": "43fb0937-7549-4455-be8a-7381e84bfee7",
+        "colId": "history",
+        "containerId": "",
+        "name": "https://yesno.wtf/#api",
+        "url": "https://yesno.wtf/#api",
+        "method": "GET",
+        "sortNum": 0,
+        "created": "2023-07-20T05:42:43.625Z",
+        "modified": "2023-07-20T05:42:43.625Z",
+        "headers": [],
+        "params": [],
+        "tests": []
+    },
+    {
+        "_id": "df55cdfd-0ed3-4b5c-9d35-160731e7e85e",
+        "colId": "history",
+        "containerId": "",
+        "name": "https://yesno.wtf/api",
+        "url": "https://yesno.wtf/api",
+        "method": "GET",
+        "sortNum": 0,
+        "created": "2023-07-20T05:43:47.614Z",
+        "modified": "2023-07-20T05:43:47.614Z",
+        "headers": [],
+        "params": [],
+        "tests": []
+    }
+]
