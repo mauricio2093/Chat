@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 class MessageFieldBox extends StatelessWidget {
@@ -5,6 +7,10 @@ class MessageFieldBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textControll = TextEditingController();
+
+    final FocusNode focusNode = FocusNode();
+
     final colors = Theme.of(context).colorScheme;
 
     final outlineInputBorder = UnderlineInputBorder(
@@ -13,21 +19,25 @@ class MessageFieldBox extends StatelessWidget {
     );
 
     final inputDecoration = InputDecoration(
+      hintText: 'End your message with a "?"',
       enabledBorder: outlineInputBorder,
       focusedBorder: outlineInputBorder,
       filled: true,
       suffixIcon: IconButton(
         icon: const Icon(Icons.send_outlined),
-        onPressed: () {},
+        onPressed: () {
+          textControll.value.text;
+          textControll.clear();
+        },
       ),
     );
 
     return TextFormField(
+      onTapOutside: (event) => focusNode.unfocus(),
+      focusNode: focusNode,
+      controller: textControll,
       decoration: inputDecoration,
-      onFieldSubmitted: (value) {
-        print('Submit value $value');
-      },
-      onChanged: (value) => print('Changed: $value'),
+      onFieldSubmitted: (value) => textControll.clear(),
     );
   }
 }
